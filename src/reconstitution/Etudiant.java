@@ -28,7 +28,7 @@ public class Etudiant extends Application {
                 new Image(String.valueOf(getClass().getResource("/favicon/32x32.png"))),
                 new Image(String.valueOf(getClass().getResource("/favicon/16x16.png")))
         );
-        primaryStage.setScene(new Scene(root, 1920, 1080));
+        primaryStage.setScene(new Scene(root, 1344, 756));
         primaryStage.setMaximized(true);
         primaryStage.show();
     }
