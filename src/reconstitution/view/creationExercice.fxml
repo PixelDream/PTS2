@@ -64,12 +64,12 @@
                                     </font>
                                 </Text>
                                 <TextField fx:id="ocultation" layoutX="5.0" layoutY="49.0" prefHeight="25.0" prefWidth="25.0" styleClass="hover" text="#" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0" />
-                                <Label layoutX="33.0" layoutY="52.0" text="Caractère d'ocultation" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="52.0">
+                                <Label layoutX="33.0" layoutY="52.0" text="Caractère d'occultation" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="52.0">
                                     <font>
                                         <Font size="15.0" />
                                     </font>
                                 </Label>
-                                <CheckBox fx:id="sensiCasse" layoutX="-4.0" layoutY="111.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="172.0" styleClass="hover" text=" Sansibilité à la casse" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="90.0">
+                                <CheckBox fx:id="sensiCasse" layoutX="-4.0" layoutY="111.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="172.0" styleClass="hover" text="Sensibilité à la casse" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="90.0">
                                     <font>
                                         <Font size="15.0" />
                                     </font>
