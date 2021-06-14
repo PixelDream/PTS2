@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane stylesheets="@style.css" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reconstitution.controller.MediaController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.1428985595703" minWidth="10.0" prefWidth="83.52383858816964" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="541.142844063895" minWidth="10.0" prefWidth="534.190447126116" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.8571166992187" minWidth="10.0" prefWidth="81.90476335797996" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.61907958984375" minWidth="10.0" prefWidth="76.14288330078125" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="94.71427263532365" minHeight="7.285735130310059" prefHeight="25.142864908490864" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="421.85711669921875" minHeight="10.0" prefHeight="397.8571350915091" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="163.42853655133928" minHeight="0.0" prefHeight="55.00002615792408" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="771.0" style="-fx-background-color: Black; -fx-background-radius: 3;" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <children>
+                <HBox alignment="CENTER" prefHeight="403.42857142857144" prefWidth="779.4285714285714" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <ImageView fx:id="imageVideo" fitHeight="403.0" fitWidth="779.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <MediaView fx:id="mediaView" fitHeight="403.0" fitWidth="779.0" onMouseClicked="#mediaView" />
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <Button fx:id="openVideo" onAction="#openVideo" prefHeight="25.0" prefWidth="613.0" style="-fx-background-color: #E6007E;" styleClass="hover" text="Ajouter une ressource" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="openImage" layoutX="94.0" layoutY="223.0" onAction="#openImage" prefHeight="25.0" prefWidth="613.0" style="-fx-background-color: #E6007E;" styleClass="hover" text="Ajouter une image" textFill="WHITE" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+        <AnchorPane fx:id="control_sound" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.rowIndex="2">
+            <children>
+                <ImageView layoutX="42.0" layoutY="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="14.0">
+                    <image>
+                        <Image url="@/icons/volumeUp.png" />
+                    </image>
+                </ImageView>
+                <Slider fx:id="volumeBtn" layoutY="22.0" onMouseDragged="#volumeBtn" prefHeight="14.0" prefWidth="57.0" styleClass="hover" value="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="22.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="control_progress" prefHeight="38.0" prefWidth="535.0" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+            <children>
+                <ProgressBar fx:id="progressVideo" onMouseClicked="#progressVideo" onMouseDragged="#progressVideo" prefHeight="18.0" prefWidth="533.0" progress="0.0" style="-fx-accent: #E6007E;" styleClass="hover" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+                <Text fx:id="timerVideo" layoutX="296.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="false" AnchorPane.topAnchor="21.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="control_action" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <children>
+                <ImageView fx:id="playBtn" layoutX="13.0" layoutY="9.0" onMouseClicked="#playBtn" styleClass="hover" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="14.0">
+                    <image>
+                        <Image url="@/icons/playIcon.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="pauseBtn" layoutX="13.0" layoutY="9.0" onMouseClicked="#pauseBtn" styleClass="hover" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="14.0">
+                    <image>
+                        <Image url="@/icons/pauseIcon.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="stopBtn" layoutX="11.0" layoutY="9.0" onMouseClicked="#stopBtn" styleClass="hover" visible="false" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="14.0">
+                    <image>
+                        <Image url="@/icons/stopIcon.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>

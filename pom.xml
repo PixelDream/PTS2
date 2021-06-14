@@ -1,0 +1,289 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>reconstitution</groupId>
+    <artifactId>Reconstitution</artifactId>
+    <version>1</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>Etudiant</id>
+            <properties>
+                <exec.mainClass>reconstitution.Etudiant</exec.mainClass>
+                <displayName>Reconstitution Etudiant</displayName>
+                <name>Reconstitution Etudiant</name>
+            </properties>
+            <build>
+                <directory>${project.basedir}/target/Etudiant</directory>
+                <finalName>Reconstitution Etudiant</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>io.github.fvarrui</groupId>
+                        <artifactId>javapackager</artifactId>
+                        <version>1.5.1</version>
+                        <executions>
+                            <execution>
+                                <id>bundling-for-windows</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                                <configuration>
+                                    <platform>windows</platform>
+                                    <createZipball>false</createZipball>
+                                    <!--suppress UnresolvedMavenProperty -->
+                                    <mainClass>reconstitution.Etudiant</mainClass>
+                                    <!-- optional -->
+                                    <bundleJre>true</bundleJre>
+                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <generateInstaller>true</generateInstaller>
+                                    <administratorRequired>false</administratorRequired>
+                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Etudiant\Etudiant.jar</runnableJar>
+                                    <copyDependencies>false</copyDependencies>
+                                    <winConfig>
+
+                                        <!-- general properties -->
+                                        <icoFile>${project.basedir}/icons/windows/reconstitution.ico</icoFile>
+                                        <generateSetup>true</generateSetup>
+                                        <generateMsi>false</generateMsi>
+                                        <generateMsm>false</generateMsm>
+
+                                        <!-- exe creation properties -->
+                                        <headerType>gui</headerType>
+                                        <wrapJar>true</wrapJar>
+                                        <companyName>IUT Laval</companyName>
+                                        <fileVersion>1.0.0.0</fileVersion>
+                                        <productVersion>1.0.0.0</productVersion>
+                                        <fileDescription>${description}</fileDescription>
+                                        <copyright>IUT Laval</copyright>
+                                        <productName>Reconstitution Etudiant</productName>
+                                        <internalName>Reconstitution Etudiant</internalName>
+                                        <originalFilename>Reconstitution Etudiant.exe</originalFilename>
+
+                                        <!-- setup generation properties -->
+                                        <setupMode>askTheUser</setupMode>
+                                        <setupLanguages>
+                                            <english>compiler:Default.isl</english>
+                                            <french>compiler:Languages\French.isl</french>
+                                        </setupLanguages>
+                                        <disableDirPage>false</disableDirPage>
+                                        <disableProgramGroupPage>false</disableProgramGroupPage>
+                                        <disableFinishedPage>false</disableFinishedPage>
+                                        <createDesktopIconTask>true</createDesktopIconTask>
+                                    </winConfig>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>bundling-for-linux</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                                <configuration>
+                                    <platform>linux</platform>
+                                    <createTarball>true</createTarball>
+                                    <mainClass>reconstitution.Etudiant</mainClass>
+                                    <!-- optional -->
+                                    <bundleJre>true</bundleJre>
+                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <generateInstaller>true</generateInstaller>
+                                    <administratorRequired>false</administratorRequired>
+                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Etudiant\Etudiant.jar</runnableJar>
+                                    <copyDependencies>false</copyDependencies>
+                                    <linuxConfig>
+                                        <pngFile>${project.basedir}/icons/linux/64x64.png</pngFile>
+                                        <xpmFile>${project.basedir}/icons/linux/64x64.xpm</xpmFile>
+                                        <generateDeb>true</generateDeb>
+                                        <generateRpm>true</generateRpm>
+                                        <productName>Reconstitution Etudiant</productName>
+                                        <internalName>Reconstitution Etudiant</internalName>
+                                    </linuxConfig>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>bundling-for-mac</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                                <configuration>
+                                    <platform>mac</platform>
+                                    <createTarball>true</createTarball>
+                                    <mainClass>reconstitution.Etudiant</mainClass>
+                                    <!-- optional -->
+                                    <bundleJre>true</bundleJre>
+                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <generateInstaller>true</generateInstaller>
+                                    <administratorRequired>false</administratorRequired>
+                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Etudiant\Etudiant.jar</runnableJar>
+                                    <copyDependencies>false</copyDependencies>
+                                    <macConfig>
+                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>
+                                        <generateDmg>true</generateDmg>
+                                        <generatePkg>true</generatePkg>
+                                        <relocateJar>true</relocateJar>
+                                        <productName>Reconstitution Etudiant</productName>
+                                        <internalName>Reconstitution Etudiant</internalName>
+                                    </macConfig>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <source>8</source>
+                            <target>8</target>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>Enseignant</id>
+            <properties>
+                <exec.mainClass>reconstitution.Enseignant</exec.mainClass>
+                <displayName>Reconstitution Enseigant</displayName>
+                <name>Reconstitution Enseigant</name>
+            </properties>
+            <build>
+                <finalName>Reconstitution Enseignant</finalName>
+                <directory>${project.basedir}/target/Enseignant</directory>
+                <plugins>
+                    <plugin>
+                        <groupId>io.github.fvarrui</groupId>
+                        <artifactId>javapackager</artifactId>
+                        <version>1.5.1</version>
+                        <executions>
+                            <execution>
+                                <id>bundling-for-windows</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                                <configuration>
+                                    <platform>windows</platform>
+                                    <createZipball>false</createZipball>
+                                    <!--suppress UnresolvedMavenProperty -->
+                                    <mainClass>reconstitution.Enseignant</mainClass>
+                                    <!-- optional -->
+                                    <bundleJre>true</bundleJre>
+                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <generateInstaller>true</generateInstaller>
+                                    <administratorRequired>false</administratorRequired>
+                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Enseignant\Enseignant.jar</runnableJar>
+                                    <copyDependencies>false</copyDependencies>
+                                    <winConfig>
+
+                                        <!-- general properties -->
+                                        <icoFile>${project.basedir}/icons/windows/reconstitution.ico</icoFile>
+                                        <generateSetup>true</generateSetup>
+                                        <generateMsi>false</generateMsi>
+                                        <generateMsm>false</generateMsm>
+
+                                        <!-- exe creation properties -->
+                                        <headerType>gui</headerType>
+                                        <wrapJar>true</wrapJar>
+                                        <companyName>IUT Laval</companyName>
+                                        <fileVersion>1.0.0.0</fileVersion>
+                                        <productVersion>1.0.0.0</productVersion>
+                                        <fileDescription>${description}</fileDescription>
+                                        <copyright>IUT Laval</copyright>
+                                        <productName>Reconstitution Enseignant</productName>
+                                        <internalName>Reconstitution Enseignant</internalName>
+                                        <originalFilename>Reconstitution Enseignant.exe</originalFilename>
+
+                                        <!-- setup generation properties -->
+                                        <setupMode>askTheUser</setupMode>
+                                        <setupLanguages>
+                                            <english>compiler:Default.isl</english>
+                                            <french>compiler:Languages\French.isl</french>
+                                        </setupLanguages>
+                                        <disableDirPage>false</disableDirPage>
+                                        <disableProgramGroupPage>false</disableProgramGroupPage>
+                                        <disableFinishedPage>false</disableFinishedPage>
+                                        <createDesktopIconTask>true</createDesktopIconTask>
+                                    </winConfig>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>bundling-for-linux</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                                <configuration>
+                                    <platform>linux</platform>
+                                    <createTarball>true</createTarball>
+                                    <mainClass>reconstitution.Enseignant</mainClass>
+                                    <!-- optional -->
+                                    <bundleJre>true</bundleJre>
+                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <generateInstaller>true</generateInstaller>
+                                    <administratorRequired>false</administratorRequired>
+                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Enseignant\Enseignant.jar</runnableJar>
+                                    <copyDependencies>false</copyDependencies>
+                                    <linuxConfig>
+                                        <pngFile>${project.basedir}/icons/linux/64x64.png</pngFile>
+                                        <xpmFile>${project.basedir}/icons/linux/64x64.xpm</xpmFile>
+                                        <generateDeb>true</generateDeb>
+                                        <generateRpm>true</generateRpm>
+                                        <productName>Reconstitution Enseignant</productName>
+                                        <internalName>Reconstitution Enseignant</internalName>
+                                    </linuxConfig>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>bundling-for-mac</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                                <configuration>
+                                    <platform>mac</platform>
+                                    <createTarball>true</createTarball>
+                                    <mainClass>reconstitution.Enseignant</mainClass>
+                                    <!-- optional -->
+                                    <bundleJre>true</bundleJre>
+                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <generateInstaller>true</generateInstaller>
+                                    <administratorRequired>false</administratorRequired>
+                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Enseignant\Enseignant.jar</runnableJar>
+                                    <copyDependencies>false</copyDependencies>
+                                    <macConfig>
+                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>
+                                        <generateDmg>true</generateDmg>
+                                        <generatePkg>true</generatePkg>
+                                        <relocateJar>true</relocateJar>
+                                        <productName>Reconstitution Enseignant</productName>
+                                        <internalName>Reconstitution Enseignant</internalName>
+                                    </macConfig>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <source>8</source>
+                            <target>8</target>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

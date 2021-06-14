@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reconstitution.controller.CorrectionController" stylesheets="@style.css">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" onShown="#goback" styleClass="hover" text="Retour">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+            <children>
+                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Correction" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="55.0">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="examTable" layoutX="83.0" layoutY="147.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="870.0" AnchorPane.topAnchor="100.0">
+                    <columns>
+                        <TableColumn fx:id="nomColumn" prefWidth="300.0" styleClass="hover" text="Nom" />
+                        <TableColumn fx:id="prenomColumn" minWidth="3.0475616455078125" prefWidth="300.0" styleClass="hover" text="Prénom" />
+                        <TableColumn fx:id="ratioColumn" minWidth="3.0475616455078125" prefWidth="200.0" styleClass="hover" text="Ratio" />
+                        <TableColumn fx:id="tempsColumn" minWidth="3.0475616455078125" prefWidth="200.0" styleClass="hover" text="Temps" />
+                    </columns>
+                </TableView>
+                <Text fx:id="previewTitle" fill="#e5007d" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arperçu" visible="false" AnchorPane.rightAnchor="730.0" AnchorPane.topAnchor="55.0">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Text>
+                <Text fx:id="preview" layoutX="1104.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="750.0" AnchorPane.bottomAnchor="949.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="90.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
