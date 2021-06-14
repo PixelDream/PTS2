@@ -84,56 +84,56 @@
                                     </winConfig>
                                 </configuration>
                             </execution>
-                            <execution>
-                                <id>bundling-for-linux</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>package</goal>
-                                </goals>
-                                <configuration>
-                                    <platform>linux</platform>
-                                    <createTarball>true</createTarball>
-                                    <mainClass>reconstitution.Etudiant</mainClass>
-                                    <!-- optional -->
-                                    <bundleJre>true</bundleJre>
-                                    <jrePath>C:\Users\yanna\Downloads\jdk-8u291-linux-x64.tar\jdk-8u291-linux-x64\jdk1.8.0_291</jrePath>
-                                    <generateInstaller>true</generateInstaller>
-                                    <administratorRequired>false</administratorRequired>
-                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Etudiant\Etudiant.jar</runnableJar>
-                                    <copyDependencies>false</copyDependencies>
-                                    <linuxConfig>
-                                        <pngFile>${project.basedir}/icons/linux/64x64.png</pngFile>
-                                        <xpmFile>${project.basedir}/icons/linux/64x64.xpm</xpmFile>
-                                        <generateDeb>true</generateDeb>
-                                        <generateRpm>true</generateRpm>
-                                    </linuxConfig>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>bundling-for-mac</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>package</goal>
-                                </goals>
-                                <configuration>
-                                    <platform>mac</platform>
-                                    <createTarball>true</createTarball>
-                                    <mainClass>reconstitution.Etudiant</mainClass>
-                                    <!-- optional -->
-                                    <bundleJre>true</bundleJre>
-                                    <jrePath>C:\Users\yanna\Downloads\jre-8u291-macosx-x64.tar\jre-8u291-macosx-x64\jre1.8.0_291.jre</jrePath>
-                                    <generateInstaller>true</generateInstaller>
-                                    <administratorRequired>false</administratorRequired>
-                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Etudiant\Etudiant.jar</runnableJar>
-                                    <copyDependencies>false</copyDependencies>
-                                    <macConfig>
-                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>
-                                        <generateDmg>true</generateDmg>
-                                        <generatePkg>true</generatePkg>
-                                        <relocateJar>true</relocateJar>
-                                    </macConfig>
-                                </configuration>
-                            </execution>
+<!--                            <execution>-->
+<!--                                <id>bundling-for-linux</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>package</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <platform>linux</platform>-->
+<!--                                    <createTarball>true</createTarball>-->
+<!--                                    <mainClass>reconstitution.Etudiant</mainClass>-->
+<!--                                    &lt;!&ndash; optional &ndash;&gt;-->
+<!--                                    <bundleJre>true</bundleJre>-->
+<!--                                    <jrePath>C:\Users\yanna\Downloads\jdk-8u291-linux-x64.tar\jdk-8u291-linux-x64\jdk1.8.0_291</jrePath>-->
+<!--                                    <generateInstaller>true</generateInstaller>-->
+<!--                                    <administratorRequired>false</administratorRequired>-->
+<!--                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Etudiant\Etudiant.jar</runnableJar>-->
+<!--                                    <copyDependencies>false</copyDependencies>-->
+<!--                                    <linuxConfig>-->
+<!--                                        <pngFile>${project.basedir}/icons/linux/64x64.png</pngFile>-->
+<!--                                        <xpmFile>${project.basedir}/icons/linux/64x64.xpm</xpmFile>-->
+<!--                                        <generateDeb>true</generateDeb>-->
+<!--                                        <generateRpm>true</generateRpm>-->
+<!--                                    </linuxConfig>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
+<!--                            <execution>-->
+<!--                                <id>bundling-for-mac</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>package</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <platform>mac</platform>-->
+<!--                                    <createTarball>true</createTarball>-->
+<!--                                    <mainClass>reconstitution.Etudiant</mainClass>-->
+<!--                                    &lt;!&ndash; optional &ndash;&gt;-->
+<!--                                    <bundleJre>true</bundleJre>-->
+<!--                                    <jrePath>C:\Users\yanna\Downloads\jre-8u291-macosx-x64.tar\jre-8u291-macosx-x64\jre1.8.0_291.jre</jrePath>-->
+<!--                                    <generateInstaller>true</generateInstaller>-->
+<!--                                    <administratorRequired>false</administratorRequired>-->
+<!--                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Etudiant\Etudiant.jar</runnableJar>-->
+<!--                                    <copyDependencies>false</copyDependencies>-->
+<!--                                    <macConfig>-->
+<!--                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>-->
+<!--                                        <generateDmg>true</generateDmg>-->
+<!--                                        <generatePkg>true</generatePkg>-->
+<!--                                        <relocateJar>true</relocateJar>-->
+<!--                                    </macConfig>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
                         </executions>
                     </plugin>
                     <plugin>
@@ -151,8 +151,8 @@
             <id>Enseignant</id>
             <properties>
                 <exec.mainClass>reconstitution.Enseignant</exec.mainClass>
-                <displayName>Reconstitution Enseigant</displayName>
-                <name>Reconstitution Enseigant</name>
+                <displayName>Reconstitution Enseignant</displayName>
+                <name>Reconstitution Enseignant</name>
             </properties>
             <build>
                 <finalName>Reconstitution Enseignant</finalName>
@@ -214,56 +214,56 @@
                                     </winConfig>
                                 </configuration>
                             </execution>
-                            <execution>
-                                <id>bundling-for-linux</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>package</goal>
-                                </goals>
-                                <configuration>
-                                    <platform>linux</platform>
-                                    <createTarball>true</createTarball>
-                                    <mainClass>reconstitution.Enseignant</mainClass>
-                                    <!-- optional -->
-                                    <bundleJre>true</bundleJre>
-                                    <jrePath>C:\Users\yanna\Downloads\jdk-8u291-linux-x64.tar\jdk-8u291-linux-x64\jdk1.8.0_291</jrePath>
-                                    <generateInstaller>true</generateInstaller>
-                                    <administratorRequired>false</administratorRequired>
-                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Enseignant\Enseignant.jar</runnableJar>
-                                    <copyDependencies>false</copyDependencies>
-                                    <linuxConfig>
-                                        <pngFile>${project.basedir}/icons/linux/64x64.png</pngFile>
-                                        <xpmFile>${project.basedir}/icons/linux/64x64.xpm</xpmFile>
-                                        <generateDeb>true</generateDeb>
-                                        <generateRpm>true</generateRpm>
-                                    </linuxConfig>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>bundling-for-mac</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>package</goal>
-                                </goals>
-                                <configuration>
-                                    <platform>mac</platform>
-                                    <createTarball>true</createTarball>
-                                    <mainClass>reconstitution.Enseignant</mainClass>
-                                    <!-- optional -->
-                                    <bundleJre>true</bundleJre>
-                                    <jrePath>C:\Users\yanna\Downloads\jre-8u291-macosx-x64.tar\jre-8u291-macosx-x64\jre1.8.0_291.jre</jrePath>
-                                    <generateInstaller>true</generateInstaller>
-                                    <administratorRequired>false</administratorRequired>
-                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Enseignant\Enseignant.jar</runnableJar>
-                                    <copyDependencies>false</copyDependencies>
-                                    <macConfig>
-                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>
-                                        <generateDmg>true</generateDmg>
-                                        <generatePkg>true</generatePkg>
-                                        <relocateJar>true</relocateJar>
-                                    </macConfig>
-                                </configuration>
-                            </execution>
+<!--                            <execution>-->
+<!--                                <id>bundling-for-linux</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>package</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <platform>linux</platform>-->
+<!--                                    <createTarball>true</createTarball>-->
+<!--                                    <mainClass>reconstitution.Enseignant</mainClass>-->
+<!--                                    &lt;!&ndash; optional &ndash;&gt;-->
+<!--                                    <bundleJre>true</bundleJre>-->
+<!--                                    <jrePath>C:\Users\yanna\Downloads\jdk-8u291-linux-x64.tar\jdk-8u291-linux-x64\jdk1.8.0_291</jrePath>-->
+<!--                                    <generateInstaller>true</generateInstaller>-->
+<!--                                    <administratorRequired>false</administratorRequired>-->
+<!--                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Enseignant\Enseignant.jar</runnableJar>-->
+<!--                                    <copyDependencies>false</copyDependencies>-->
+<!--                                    <linuxConfig>-->
+<!--                                        <pngFile>${project.basedir}/icons/linux/64x64.png</pngFile>-->
+<!--                                        <xpmFile>${project.basedir}/icons/linux/64x64.xpm</xpmFile>-->
+<!--                                        <generateDeb>true</generateDeb>-->
+<!--                                        <generateRpm>true</generateRpm>-->
+<!--                                    </linuxConfig>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
+<!--                            <execution>-->
+<!--                                <id>bundling-for-mac</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>package</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <platform>mac</platform>-->
+<!--                                    <createTarball>true</createTarball>-->
+<!--                                    <mainClass>reconstitution.Enseignant</mainClass>-->
+<!--                                    &lt;!&ndash; optional &ndash;&gt;-->
+<!--                                    <bundleJre>true</bundleJre>-->
+<!--                                    <jrePath>C:\Users\yanna\Downloads\jre-8u291-macosx-x64.tar\jre-8u291-macosx-x64\jre1.8.0_291.jre</jrePath>-->
+<!--                                    <generateInstaller>true</generateInstaller>-->
+<!--                                    <administratorRequired>false</administratorRequired>-->
+<!--                                    <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Enseignant\Enseignant.jar</runnableJar>-->
+<!--                                    <copyDependencies>false</copyDependencies>-->
+<!--                                    <macConfig>-->
+<!--                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>-->
+<!--                                        <generateDmg>true</generateDmg>-->
+<!--                                        <generatePkg>true</generatePkg>-->
+<!--                                        <relocateJar>true</relocateJar>-->
+<!--                                    </macConfig>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
                         </executions>
                     </plugin>
                     <plugin>
