@@ -25,7 +25,6 @@ public class EtudiantController implements Initializable {
     private void openExercise() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/faireExercice.fxml"));
         Etudiant.getStage().setScene(new Scene(root));
-        Etudiant.getStage().setAlwaysOnTop(true);
         Etudiant.getStage().setMaximized(true);
         Etudiant.getStage().show();
     }
@@ -43,7 +42,6 @@ public class EtudiantController implements Initializable {
 
         stage.setScene(new Scene(root));
         stage.setTitle("A propos");
-        stage.setAlwaysOnTop(true);
         stage.setResizable(false);
         stage.initModality(Modality.WINDOW_MODAL);
         stage.initOwner(Etudiant.getStage().getScene().getWindow());
