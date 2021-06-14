@@ -1,6 +1,7 @@
 package reconstitution.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.Slider;
@@ -16,6 +17,7 @@ import javafx.stage.FileChooser;
 import javafx.util.Duration;
 import reconstitution.Enseignant;
 import reconstitution.model.MediaExercice;
+import reconstitution.utils.PopUp;
 
 import java.io.File;
 import java.util.Arrays;
@@ -25,6 +27,7 @@ import java.util.List;
 public class MediaController {
 
     private File ressource = null, image = null;
+    private boolean audio = false;
 
     @FXML
     private MediaView mediaView;
@@ -56,14 +59,14 @@ public class MediaController {
             image = fileChooser.showOpenDialog(Enseignant.getStage());
             Image img = new Image(image.toURI().toString());
 
-            if (ressource != null) {
+            if (image != null) {
                 imageVideo.setImage(img);
                 imageVideo.setVisible(true);
                 imageVideo.setOnMouseClicked(this::mediaView);
                 openImage.setVisible(false);
             }
         } catch (IllegalArgumentException iae) {
-            System.out.println("File Not Found");
+            new PopUp(Alert.AlertType.ERROR, "Erreur Fichier", "Le fichier n'a pas été trouvé.", image.getAbsolutePath());
         }
     }
 
@@ -83,9 +86,9 @@ public class MediaController {
                 List<String> fileNameExt = Arrays.asList(ressource.getName().split("\\."));
 
                 if (fileNameExt.get(fileNameExt.size() - 1).matches("mp3")) {
+                    audio = true;
                     mediaPlayer.setOnReady(() -> {
                         Image image = (Image) mediaPlayer.getMedia().getMetadata().get("image");
-                        System.out.println("img: " + image);
                         if (image != null) {
                             imageVideo.setImage(image);
                             imageVideo.setVisible(true);
@@ -197,7 +200,10 @@ public class MediaController {
             imageVideo.setOnMouseClicked(this::mediaView);
         }
 
+        System.out.println(mediaExercice.getRessource().toURI().toString());
         Media media = new Media(mediaExercice.getRessource().toURI().toString());
+
+
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaView.setMediaPlayer(mediaPlayer);
         control_sound.setVisible(true);
@@ -220,5 +226,9 @@ public class MediaController {
 
     public File getImage() {
         return image;
+    }
+
+    public boolean isAudio() {
+        return audio;
     }
 }

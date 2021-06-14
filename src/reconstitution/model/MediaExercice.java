@@ -32,6 +32,7 @@ public class MediaExercice implements Serializable {
             }
 
             imageName = image.getName();
+            ressourceName = ressource.getName();
         } else {
             try {
                 ressourceByte = Files.readAllBytes(ressource.toPath());
@@ -40,7 +41,6 @@ public class MediaExercice implements Serializable {
             }
             ressourceName = ressource.getName();
         }
-
         this.ressource = ressourceByte;
         this.ressourceName = ressourceName;
         this.image = imgByte;
@@ -63,13 +63,12 @@ public class MediaExercice implements Serializable {
         new File(CACHE_DIRECTORY).mkdir();
 
         try {
-            Files.createTempFile(name, ".tmp");
+            Files.createTempFile(name, "");
         } catch (IOException exception) {
             exception.printStackTrace();
         }
 
-        File file = new File(CACHE_DIRECTORY + File.separator + name + ".tmp");
-
+        File file = new File(CACHE_DIRECTORY + File.separator + name);
 
         try {
             OutputStream os = new FileOutputStream(file);

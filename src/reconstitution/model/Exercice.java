@@ -64,9 +64,10 @@ public abstract class Exercice implements Serializable {
             }
 
         } catch (IllegalArgumentException iae) {
-            new PopUp(Alert.AlertType.ERROR, "Aucun fichier", "Aucun fichier n'a été ouvert... Merci de réessayer.");
+            new PopUp(Alert.AlertType.ERROR, "Erreur Fichier", "Le fichier n'a pas été trouvé.");
         }
 
+        new PopUp(Alert.AlertType.ERROR, "Erreur Fichier", "Le fichier n'a pas été trouvé.");
         return null;
     }
 
@@ -115,9 +116,10 @@ public abstract class Exercice implements Serializable {
 
             return exerciceList;
         } catch (IllegalArgumentException iae) {
-            System.out.println("File Not Found");
+            new PopUp(Alert.AlertType.ERROR, "Erreur Fichier", "Le fichier n'a pas été trouvé.");
         }
 
+        new PopUp(Alert.AlertType.ERROR, "Erreur Fichier", "Le fichier n'a pas été trouvé.");
         return null;
     }
 

@@ -60,7 +60,7 @@ public class CreationController implements Initializable {
 
     @FXML
     private void enregistrer() {
-        MediaExercice mediaExercice = new MediaExercice(mediaController.getRessource(), mediaController.getImage(), true);
+        MediaExercice mediaExercice = new MediaExercice(mediaController.getRessource(), mediaController.getImage(), mediaController.isAudio());
 
         if (entrainementMode.isSelected()) {
             Entrainement entrainement = new Entrainement();
