@@ -96,7 +96,7 @@
                                     <mainClass>reconstitution.Etudiant</mainClass>
                                     <!-- optional -->
                                     <bundleJre>true</bundleJre>
-                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <jrePath>C:\Users\yanna\Downloads\jdk-8u291-linux-x64.tar\jdk-8u291-linux-x64\jdk1.8.0_291</jrePath>
                                     <generateInstaller>true</generateInstaller>
                                     <administratorRequired>false</administratorRequired>
                                     <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Etudiant\Etudiant.jar</runnableJar>
@@ -106,8 +106,6 @@
                                         <xpmFile>${project.basedir}/icons/linux/64x64.xpm</xpmFile>
                                         <generateDeb>true</generateDeb>
                                         <generateRpm>true</generateRpm>
-                                        <productName>Reconstitution Etudiant</productName>
-                                        <internalName>Reconstitution Etudiant</internalName>
                                     </linuxConfig>
                                 </configuration>
                             </execution>
@@ -123,7 +121,7 @@
                                     <mainClass>reconstitution.Etudiant</mainClass>
                                     <!-- optional -->
                                     <bundleJre>true</bundleJre>
-                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <jrePath>C:\Users\yanna\Downloads\jre-8u291-macosx-x64.tar\jre-8u291-macosx-x64\jre1.8.0_291.jre</jrePath>
                                     <generateInstaller>true</generateInstaller>
                                     <administratorRequired>false</administratorRequired>
                                     <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Etudiant\Etudiant.jar</runnableJar>
@@ -133,8 +131,6 @@
                                         <generateDmg>true</generateDmg>
                                         <generatePkg>true</generatePkg>
                                         <relocateJar>true</relocateJar>
-                                        <productName>Reconstitution Etudiant</productName>
-                                        <internalName>Reconstitution Etudiant</internalName>
                                     </macConfig>
                                 </configuration>
                             </execution>
@@ -230,7 +226,7 @@
                                     <mainClass>reconstitution.Enseignant</mainClass>
                                     <!-- optional -->
                                     <bundleJre>true</bundleJre>
-                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <jrePath>C:\Users\yanna\Downloads\jdk-8u291-linux-x64.tar\jdk-8u291-linux-x64\jdk1.8.0_291</jrePath>
                                     <generateInstaller>true</generateInstaller>
                                     <administratorRequired>false</administratorRequired>
                                     <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Enseignant\Enseignant.jar</runnableJar>
@@ -240,8 +236,6 @@
                                         <xpmFile>${project.basedir}/icons/linux/64x64.xpm</xpmFile>
                                         <generateDeb>true</generateDeb>
                                         <generateRpm>true</generateRpm>
-                                        <productName>Reconstitution Enseignant</productName>
-                                        <internalName>Reconstitution Enseignant</internalName>
                                     </linuxConfig>
                                 </configuration>
                             </execution>
@@ -257,7 +251,7 @@
                                     <mainClass>reconstitution.Enseignant</mainClass>
                                     <!-- optional -->
                                     <bundleJre>true</bundleJre>
-                                    <jrePath>C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1</jrePath>
+                                    <jrePath>C:\Users\yanna\Downloads\jre-8u291-macosx-x64.tar\jre-8u291-macosx-x64\jre1.8.0_291.jre</jrePath>
                                     <generateInstaller>true</generateInstaller>
                                     <administratorRequired>false</administratorRequired>
                                     <runnableJar>C:\Users\yanna\Desktop\PT\out\artifacts\Enseignant\Enseignant.jar</runnableJar>
@@ -267,8 +261,6 @@
                                         <generateDmg>true</generateDmg>
                                         <generatePkg>true</generatePkg>
                                         <relocateJar>true</relocateJar>
-                                        <productName>Reconstitution Enseignant</productName>
-                                        <internalName>Reconstitution Enseignant</internalName>
                                     </macConfig>
                                 </configuration>
                             </execution>
