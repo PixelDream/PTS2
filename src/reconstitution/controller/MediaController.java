@@ -200,7 +200,7 @@ public class MediaController {
             imageVideo.setOnMouseClicked(this::mediaView);
         }
 
-        System.out.println(mediaExercice.getRessource().toURI().toString());
+        System.out.println(mediaExercice.getRessource().toURI());
         Media media = new Media(mediaExercice.getRessource().toURI().toString());
 
 

@@ -1,56 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
-<VBox prefHeight="1080.0" prefWidth="1920.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reconstitution.controller.EtudiantController">
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="720.0" prefWidth="1080.0" stylesheets="@style.css"
+      xmlns="http://javafx.com/javafx/9.0.1" fx:controller="reconstitution.controller.EtudiantController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
                 <Menu mnemonicParsing="false" styleClass="hover" text="Exercice">
                     <items>
-                        <MenuItem fx:id="openExercise" mnemonicParsing="false" onAction="#openExercise" styleClass="hover" text="Ouvrir" />
+                        <MenuItem fx:id="openExercise" mnemonicParsing="false" onAction="#openExercise"
+                                  styleClass="hover" text="Ouvrir"/>
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" onShown="#showAbout" styleClass="hover" text="A propos">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="" />
+                        <MenuItem mnemonicParsing="false" text=""/>
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0"
+                    style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
             <children>
-                <ImageView fitHeight="716.0" fitWidth="1057.0" layoutX="281.0" layoutY="131.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="281.0" layoutY="131.0"
+                           AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                     <image>
-                        <Image url="@/draw.png" />
+                        <Image url="@/draw.png"/>
                     </image>
                 </ImageView>
-                <ImageView fitHeight="124.0" fitWidth="385.0" layoutY="308.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0">
+                <ImageView fitHeight="96.0" fitWidth="300.0" layoutY="308.0" AnchorPane.bottomAnchor="25.0"
+                           AnchorPane.leftAnchor="25.0">
                     <image>
-                        <Image url="@/logoIUT.png" />
+                        <Image url="@/logoIUT.png"/>
                     </image>
                 </ImageView>
-                <ImageView fitHeight="222.0" fitWidth="1103.0" layoutX="240.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                <ImageView fitHeight="130.0" fitWidth="500.0" layoutX="240.0" AnchorPane.rightAnchor="-1.0"
+                           AnchorPane.topAnchor="0.0">
                     <image>
-                        <Image url="@/decoration.png" />
+                        <Image url="@/decoration.png"/>
                     </image>
                 </ImageView>
-                <Text fill="#e5007d" layoutX="-7.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reconstitution" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="200.0">
+                <Text fill="#e5007d" layoutX="158.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Reconstitution" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="150.0">
                     <font>
-                        <Font size="150.0" />
+                        <Font size="70.0"/>
                     </font>
                 </Text>
-                <Text layoutX="56.0" layoutY="414.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cette application constitue, pour les étudiants, un support pour l’apprentissage de langues étrangères. Elle a pour mission d’aider un étudiant à reconstituer le texte, dans la langue parlée, issu d’une vidéo ou d’un fichier audio lu." textAlignment="JUSTIFY" wrappingWidth="943.2050170898438" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="400.0">
+                <Text layoutX="120.0" layoutY="217.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Cette application constitue, pour les étudiants, un support pour l’apprentissage de langues étrangères. Elle a pour mission d’aider un étudiant à reconstituer le texte, dans la langue parlée, issu d’une vidéo ou d’un fichier audio lu."
+                      textAlignment="JUSTIFY" wrappingWidth="911.9668960571289" AnchorPane.leftAnchor="100.0"
+                      AnchorPane.topAnchor="250.0">
                     <font>
-                        <Font size="25.0" />
+                        <Font size="20.0"/>
                     </font>
                 </Text>
             </children>

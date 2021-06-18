@@ -1,5 +1,8 @@
 package reconstitution.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Entrainement extends Exercice {
 
     private boolean motIncomplet;
@@ -9,14 +12,6 @@ public class Entrainement extends Exercice {
 
     public Entrainement() {
         super();
-    }
-
-    public void setMotIncomplet(boolean motIncomplet) {
-        this.motIncomplet = motIncomplet;
-    }
-
-    public void setMinLettre(int minLettre) {
-        this.minLettre = minLettre;
     }
 
     public boolean isAfficherRatio() {
@@ -36,14 +31,14 @@ public class Entrainement extends Exercice {
     }
 
     @Override
-    public boolean proposer(String proposition) {
-        boolean containCorrect = false;
+    public List<Integer> proposer(String proposition) {
+        List<Integer> containCorrect = new ArrayList<>();
 
         for (String prop : proposition.split("[ '-,.;:]")) {
             for (int i = 0; i < getMots().length; i++) {
                 boolean isCorrect;
 
-                if (!getMotsOccult()[i].matches("[" + getOccultation() + "]+")) {
+                if (!getMotsOccult()[i].matches(".*[" + getOccultation() + "]+")) {
                     continue;
                 } else if (isCaseSensi()) {
                     isCorrect = getMots()[i].equals(prop);
@@ -54,13 +49,13 @@ public class Entrainement extends Exercice {
                 if (isCorrect) {
                     getMotsOccult()[i] = getMots()[i];
                     addNbNombreDecouv();
-                    containCorrect = true;
+                    containCorrect.add(i);
                 } else {
                     if (motIncomplet && prop.length() >= minLettre) {
                         if (getMots()[i].startsWith(prop)) {
-                            getMotsOccult()[i] = getMots()[i];
-                            addNbNombreDecouv();
-                            containCorrect = true;
+                            String word = getMots()[i].substring(prop.length());
+                            getMotsOccult()[i] = prop + word.replaceAll(".", getOccultation());
+                            containCorrect.add(i);
                         }
                     }
                 }
@@ -68,5 +63,21 @@ public class Entrainement extends Exercice {
         }
 
         return containCorrect;
+    }
+
+    public boolean isMotIncomplet() {
+        return motIncomplet;
+    }
+
+    public void setMotIncomplet(boolean motIncomplet) {
+        this.motIncomplet = motIncomplet;
+    }
+
+    public int getMinLettre() {
+        return minLettre;
+    }
+
+    public void setMinLettre(int minLettre) {
+        this.minLettre = minLettre;
     }
 }

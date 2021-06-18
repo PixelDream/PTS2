@@ -16,7 +16,7 @@ public class PopUpName extends Dialog<Optional<Pair<String, String>>> {
 
     public PopUpName() {
         this.setTitle("Vos informations");
-        this.setHeaderText("Quel est votre identitée");
+        this.setHeaderText("Quelle est votre identitée");
 
         ButtonType loginButtonType = new ButtonType("Enregistrer", ButtonBar.ButtonData.OK_DONE);
         this.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);

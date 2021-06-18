@@ -4,10 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -57,12 +54,7 @@ public class CorrectionController implements Initializable {
     @FXML
     private void goback() throws IOException {
         PopUp popUp = new PopUp(Alert.AlertType.CONFIRMATION, "Confirmation", "Vous êtes sûr de quitter la correction ?");
-
-        if (popUp.isAccepted()) {
-            Parent root = FXMLLoader.load(getClass().getResource("/enseignantAccueil.fxml"));
-            Enseignant.getStage().setScene(new Scene(root));
-            Enseignant.getStage().show();
-        }
+        if (popUp.isAccepted()) Enseignant.changeScene("/enseignantAccueil.fxml");
     }
 
 }

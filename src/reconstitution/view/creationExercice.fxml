@@ -1,152 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reconstitution.controller.CreationController" stylesheets="@style.css">
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: white;"
+      xmlns="http://javafx.com/javafx/9.0.1" fx:controller="reconstitution.controller.CreationController">
     <children>
-        <MenuBar VBox.vgrow="NEVER">
+        <MenuBar>
             <menus>
                 <Menu mnemonicParsing="false" onShown="#goback" styleClass="hover" text="Retour">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="" />
+                        <MenuItem mnemonicParsing="false" text=""/>
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+        <StackPane prefHeight="1080.0" prefWidth="720.0" style="-fx-background-color: white;">
             <children>
-                <GridPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                <GridPane hgap="50.0" maxHeight="Infinity" maxWidth="Infinity" prefHeight="110.85714285714286"
+                          prefWidth="1080.0" vgap="15.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="903.90478515625" minWidth="10.0" prefWidth="780.9524187360491" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1037.9999389648438" minWidth="10.0" prefWidth="83.61900983537942" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1037.9999389648438" minWidth="10.0" prefWidth="960.7143293108259" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints maxHeight="332.00003923688615" minHeight="10.0" prefHeight="241.99998256138392" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="719.4285518101284" minHeight="10.0" prefHeight="473.00001743861606" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="411.61908830915183" minHeight="10.0" prefHeight="236.38092912946433" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="127.85715593610489" minHeight="0.0" percentHeight="5.0"
+                                        prefHeight="26.0" vgrow="NEVER"/>
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="25.0"
+                                        prefHeight="141.42857142857142" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="10.0" percentHeight="50.0" vgrow="ALWAYS"/>
+                        <RowConstraints maxHeight="219.9999171665737" minHeight="10.0" percentHeight="3.0"
+                                        prefHeight="31.000021798270154" vgrow="NEVER"/>
+                        <RowConstraints maxHeight="219.9999171665737" minHeight="10.0" percentHeight="10.0"
+                                        prefHeight="31.000021798270154" vgrow="NEVER"/>
+                        <RowConstraints maxHeight="255.0" minHeight="0.0" percentHeight="30.0" prefHeight="0.0"
+                                        vgrow="NEVER"/>
+                        <RowConstraints maxHeight="255.0" minHeight="0.0" percentHeight="5.0" prefHeight="255.0"
+                                        vgrow="NEVER"/>
                     </rowConstraints>
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                    </padding>
                     <children>
-                        <AnchorPane prefHeight="206.0" prefWidth="739.0">
+                        <StackPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="150.0" prefWidth="200.0">
                             <children>
-                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Insérez votre consigne" wrappingWidth="778.7142848968506" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="Insérez votre consigne" wrappingWidth="477.71428871924036"
+                                      StackPane.alignment="CENTER_LEFT">
                                     <font>
-                                        <Font name="System Bold" size="20.0" />
+                                        <Font name="System Bold" size="20.0"/>
                                     </font>
                                 </Text>
-                                <TextArea fx:id="consigne" prefHeight="167.42857142857142" prefWidth="763.4285714285714" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
                             </children>
-                        </AnchorPane>
-
-                        <fx:include fx:id="media" source="mediaSnippet.fxml" />
-
-
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
                             <children>
-                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Options" wrappingWidth="778.7142848968506" AnchorPane.topAnchor="0.0">
-                                    <font>
-                                        <Font name="System Bold" size="20.0" />
-                                    </font>
-                                </Text>
-                                <TextField fx:id="ocultation" layoutX="5.0" layoutY="49.0" prefHeight="25.0" prefWidth="25.0" styleClass="hover" text="#" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0" />
-                                <Label layoutX="33.0" layoutY="52.0" text="Caractère d'occultation" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="52.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <CheckBox fx:id="sensiCasse" layoutX="-4.0" layoutY="111.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="172.0" styleClass="hover" text="Sensibilité à la casse" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="90.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </CheckBox>
-                                <RadioButton fx:id="entrainementMode" layoutX="244.0" layoutY="53.0" styleClass="hover" mnemonicParsing="false" onAction="#entrainementMode" selected="true" text="Mode Entraînement" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="53.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </RadioButton>
-                                <RadioButton fx:id="evaluationMode" layoutX="580.0" layoutY="54.0" styleClass="hover" mnemonicParsing="false" onAction="#evaluationMode" text="Mode Evaluation" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="54.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </RadioButton>
-                                <CheckBox fx:id="motIncomplet" layoutX="294.0" layoutY="91.0" styleClass="hover" mnemonicParsing="false" onAction="#incompletMode" prefHeight="21.0" prefWidth="172.0" text="Mot incomplet" AnchorPane.leftAnchor="294.0" AnchorPane.topAnchor="91.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </CheckBox>
-                                <CheckBox fx:id="afficherRatio" layoutX="294.0" layoutY="168.0" styleClass="hover" mnemonicParsing="false" prefHeight="21.0" prefWidth="292.0" text="Afficher le nombre de mots découvert" AnchorPane.bottomAnchor="49.71428571428572" AnchorPane.leftAnchor="294.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </CheckBox>
-                                <CheckBox fx:id="afficherSolution" layoutX="294.0" layoutY="218.0" styleClass="hover" mnemonicParsing="false" prefHeight="21.0" prefWidth="265.0" text="Autoriser l'affichage de la solution" AnchorPane.bottomAnchor="-0.2857142857142776" AnchorPane.leftAnchor="294.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </CheckBox>
-                                <TextField styleClass="hover" fx:id="nbMotIncomplet" disable="true" layoutX="342.0" layoutY="124.0" prefHeight="25.0" prefWidth="25.0" text="2" AnchorPane.leftAnchor="342.0" />
-                                <Label fx:id="nbLettreLabel" disable="true" layoutX="382.0" layoutY="127.0" text="lettres" AnchorPane.leftAnchor="382.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <CheckBox styleClass="hover" fx:id="limiteTemps" disable="true" layoutX="630.0" layoutY="92.0" mnemonicParsing="false" onAction="#limiteMode" prefHeight="21.0" prefWidth="172.0" text="Limite de temps" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="92.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </CheckBox>
-                                <TextField styleClass="hover" fx:id="nbLimiteTemps" disable="true" layoutX="676.0" layoutY="135.0" prefHeight="25.0" prefWidth="41.0" text="35" />
-                                <Label fx:id="tempsLabel" disable="true" layoutX="725.0" layoutY="137.0" text="Minutes">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
+                                <TextArea fx:id="consigne" wrapText="true"/>
                             </children>
-                        </AnchorPane>
-                        <AnchorPane prefHeight="955.0" prefWidth="959.0" GridPane.columnIndex="2" GridPane.rowSpan="3">
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                                   GridPane.rowSpan="2">
                             <children>
-                                <Text fill="#e5007d" layoutX="157.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insérez la transcription" wrappingWidth="778.7142848968506" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
-                                    <font>
-                                        <Font name="System Bold" size="20.0" />
-                                    </font>
-                                </Text>
-                                <TextArea fx:id="transcription" onKeyTyped="#countText" prefHeight="632.0" prefWidth="959.0" wrapText="true" AnchorPane.bottomAnchor="282.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
-                                <Text fx:id="count" layoutX="901.0" layoutY="946.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 mots" visible="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="680.0">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Text>
-                                <Text fill="#e5007d" layoutX="167.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insérez une aide" wrappingWidth="778.7142848968506" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="0.0">
-                                    <font>
-                                        <Font name="System Bold" size="20.0" />
-                                    </font>
-                                </Text>
-                                <TextArea fx:id="aide" layoutX="10.0" layoutY="440.0" prefHeight="202.0" prefWidth="959.0" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" />
+                                <TextArea fx:id="transcription" onKeyTyped="#countText" prefHeight="377.0"
+                                          prefWidth="579.0" wrapText="true"/>
                             </children>
-                        </AnchorPane>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+                            <children>
+                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="Insérez la transcription" wrappingWidth="527.2856349945068"
+                                      StackPane.alignment="CENTER_LEFT">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <children>
+                                <Text fx:id="count" strokeType="OUTSIDE" strokeWidth="0.0" text="0 mots" visible="false"
+                                      StackPane.alignment="TOP_RIGHT">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <children>
+                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Insérez une aide"
+                                      wrappingWidth="157.0000820159912" StackPane.alignment="CENTER_LEFT">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <children>
+                                <TextArea fx:id="aide" wrapText="true"/>
+                            </children>
+                        </StackPane>
+                        <StackPane GridPane.rowIndex="5" GridPane.rowSpan="2">
+                            <children>
+                                <AnchorPane>
+                                    <children>
+                                        <TextField fx:id="ocultation" prefHeight="25.0" prefWidth="25.0"
+                                                   styleClass="hover" text="#" AnchorPane.leftAnchor="5.0"/>
+                                        <Label text="Caractère d'occultation" AnchorPane.leftAnchor="50.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </Label>
+                                        <CheckBox fx:id="sensiCasse" mnemonicParsing="false" prefHeight="21.0"
+                                                  prefWidth="172.0" styleClass="hover" text="Sensibilité à la casse"
+                                                  AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="0.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </CheckBox>
+                                        <RadioButton fx:id="entrainementMode" mnemonicParsing="false"
+                                                     onAction="#entrainementMode" selected="true" styleClass="hover"
+                                                     text="Mode Entraînement" AnchorPane.leftAnchor="7.0"
+                                                     AnchorPane.topAnchor="35.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton fx:id="evaluationMode" mnemonicParsing="false"
+                                                     onAction="#evaluationMode" styleClass="hover"
+                                                     text="Mode Evaluation" AnchorPane.leftAnchor="320.0"
+                                                     AnchorPane.topAnchor="35.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </RadioButton>
+                                        <CheckBox fx:id="motIncomplet" mnemonicParsing="false" onAction="#incompletMode"
+                                                  prefHeight="21.0" prefWidth="172.0" styleClass="hover"
+                                                  text="Mot incomplet" AnchorPane.leftAnchor="20.0"
+                                                  AnchorPane.topAnchor="70.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </CheckBox>
+                                        <CheckBox fx:id="afficherRatio" mnemonicParsing="false" prefHeight="21.0"
+                                                  prefWidth="292.0" styleClass="hover"
+                                                  text="Afficher le nombre de mots découvert"
+                                                  AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="110.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </CheckBox>
+                                        <CheckBox fx:id="afficherSolution" mnemonicParsing="false" prefHeight="21.0"
+                                                  prefWidth="265.0" styleClass="hover"
+                                                  text="Autoriser l'affichage de la solution"
+                                                  AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="150.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </CheckBox>
+                                        <TextField fx:id="nbMotIncomplet" disable="true" prefHeight="25.0"
+                                                   prefWidth="25.0" styleClass="hover" text="2"
+                                                   AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="70.0"/>
+                                        <Label fx:id="nbLettreLabel" disable="true" text="lettres"
+                                               AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="70.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </Label>
+                                        <CheckBox fx:id="limiteTemps" disable="true" mnemonicParsing="false"
+                                                  onAction="#limiteMode" prefHeight="21.0" prefWidth="138.0"
+                                                  styleClass="hover" text="Limite de temps"
+                                                  AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="65.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </CheckBox>
+                                        <TextField fx:id="nbLimiteTemps" disable="true" prefHeight="25.0"
+                                                   prefWidth="41.0" styleClass="hover" text="35"
+                                                   AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="100.0"/>
+                                        <Label fx:id="tempsLabel" disable="true" text="Minutes"
+                                               AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="100.0">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </StackPane>
+                        <StackPane GridPane.rowIndex="4">
+                            <children>
+                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Options"
+                                      wrappingWidth="78.14287376403809" StackPane.alignment="CENTER_LEFT">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <StackPane GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2"
+                                   GridPane.valignment="CENTER" GridPane.vgrow="always">
+                            <children>
+                                <fx:include fx:id="media" source="mediaSnippet.fxml"/>
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#enregistrer" prefHeight="31.0"
+                                        prefWidth="111.0" style="-fx-background-color: #e5007d;" styleClass="hover"
+                                        text="Enregistrer" textAlignment="CENTER" textFill="WHITE"
+                                        StackPane.alignment="CENTER_RIGHT">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                        </StackPane>
                     </children>
                 </GridPane>
-                <Button layoutX="1759.0" layoutY="1005.0" mnemonicParsing="false" onAction="#enregistrer" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: #e5007d;" styleClass="hover" text="Enregistrer" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="50.0">
-                    <font>
-                        <Font name="System Bold" size="15.0" />
-                    </font>
-                </Button>
             </children>
-        </AnchorPane>
+        </StackPane>
     </children>
 </VBox>

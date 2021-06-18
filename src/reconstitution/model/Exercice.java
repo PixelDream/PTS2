@@ -17,6 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public abstract class Exercice implements Serializable {
     private String consigne;
     private String aide;
+    private String text;
     private String occultation;
     private boolean caseSensi;
     private String[] textOccult;
@@ -77,7 +78,7 @@ public abstract class Exercice implements Serializable {
 
         try {
             FileChooser fileChooser = new FileChooser();
-            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Exercice", "*.exo"));
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Exercice", "*.eva"));
             fileChooser.setTitle("Choisir un exercice");
             List<File> selectedFiles = fileChooser.showOpenMultipleDialog(Enseignant.getStage());
 
@@ -125,11 +126,12 @@ public abstract class Exercice implements Serializable {
 
     public boolean Exporter() {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Exercice", "*.exo"));
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Exercice", "*.exo", "*.eva"));
         fileChooser.setTitle("Enregistrer un exercice");
 
         if (this instanceof Evaluation && ((Evaluation) this).getEtudiant() != null) {
-            fileChooser.setInitialFileName(((Evaluation) this).getEtudiant().getPrenom() + "_" + ((Evaluation) this).getEtudiant().getNom() + "_exercice.exo");
+            this.mediaExercice = null;
+            fileChooser.setInitialFileName(((Evaluation) this).getEtudiant().getPrenom() + "_" + ((Evaluation) this).getEtudiant().getNom() + "_exercice.eva");
         } else {
             fileChooser.setInitialFileName("exercice.exo");
         }
@@ -175,6 +177,7 @@ public abstract class Exercice implements Serializable {
     }
 
     public void setTexte(String texte) {
+        this.text = texte;
         String txt = texte.trim()
                 .replaceAll("[ ]*[.][ ]*", " . ")
                 .replaceAll("[ ]*[?][ ]*", " ? ")
@@ -255,6 +258,10 @@ public abstract class Exercice implements Serializable {
         return text;
     }
 
+    public String getText() {
+        return text;
+    }
+
     public String[] getMotsOccult() {
         return textOccult;
     }
@@ -279,5 +286,5 @@ public abstract class Exercice implements Serializable {
         return mots;
     }
 
-    public abstract boolean proposer(String proposition);
+    public abstract List<Integer> proposer(String proposition);
 }

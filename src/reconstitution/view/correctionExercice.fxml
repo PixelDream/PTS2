@@ -1,51 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reconstitution.controller.CorrectionController">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="720.0" prefWidth="1080.0" stylesheets="@style.css"
+      xmlns="http://javafx.com/javafx/9.0.1" fx:controller="reconstitution.controller.CorrectionController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
                 <Menu mnemonicParsing="false" onShown="#goback" styleClass="hover" text="Retour">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="" />
+                        <MenuItem mnemonicParsing="false" text=""/>
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+        <AnchorPane prefHeight="720.0" prefWidth="1080.0">
             <children>
-                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Correction" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="55.0">
-                    <font>
-                        <Font name="System Bold" size="20.0" />
-                    </font>
-                </Text>
-                <TableView fx:id="examTable" layoutX="83.0" layoutY="147.0" prefHeight="777.0" prefWidth="1000.0" AnchorPane.bottomAnchor="182.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="870.0" AnchorPane.topAnchor="100.0">
-                    <columns>
-                        <TableColumn fx:id="nomColumn" prefWidth="300.0" styleClass="hover" text="Nom" />
-                        <TableColumn fx:id="prenomColumn" minWidth="3.0475616455078125" prefWidth="300.0" styleClass="hover" text="Prénom" />
-                        <TableColumn fx:id="ratioColumn" minWidth="3.0475616455078125" prefWidth="200.0" styleClass="hover" text="Ratio" />
-                        <TableColumn fx:id="tempsColumn" minWidth="3.0475616455078125" prefWidth="200.0" styleClass="hover" text="Temps" />
-                    </columns>
-                </TableView>
-                <Text fx:id="previewTitle" fill="#e5007d" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arperçu" visible="false" AnchorPane.rightAnchor="730.0" AnchorPane.topAnchor="55.0">
-                    <font>
-                        <Font name="System Bold" size="20.0" />
-                    </font>
-                </Text>
-                <Text fx:id="preview" layoutX="1104.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="750.0" AnchorPane.bottomAnchor="949.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="90.0">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Text>
+                <GridPane hgap="50.0" layoutY="10.285713195800781" vgap="15.0" AnchorPane.bottomAnchor="50.0"
+                          AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="60.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" percentHeight="95.0" vgrow="ALWAYS"/>
+                    </rowConstraints>
+                    <children>
+                        <StackPane GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                            <children>
+                                <TableView fx:id="examTable">
+                                    <columns>
+                                        <TableColumn fx:id="nomColumn" prefWidth="133.14288330078125" styleClass="hover"
+                                                     text="Nom"/>
+                                        <TableColumn fx:id="prenomColumn" minWidth="3.0475616455078125"
+                                                     prefWidth="153.14288330078125" styleClass="hover" text="Prénom"/>
+                                        <TableColumn fx:id="ratioColumn" minWidth="3.0475616455078125"
+                                                     prefWidth="85.142822265625" styleClass="hover" text="Ratio"/>
+                                        <TableColumn fx:id="tempsColumn" minWidth="3.0475616455078125"
+                                                     prefWidth="92.00003051757812" styleClass="hover" text="Temps"/>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                        </StackPane>
+                        <StackPane>
+                            <children>
+                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Correction"
+                                      StackPane.alignment="TOP_LEFT">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <StackPane GridPane.columnIndex="1">
+                            <children>
+                                <Text fx:id="previewTitle" fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="Aperçu" visible="false" StackPane.alignment="TOP_LEFT">
+                                    <font>
+                                        <Font name="System Bold" size="20.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <children>
+                                <Text fx:id="preview" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false"
+                                      wrappingWidth="385.4284362792969" StackPane.alignment="TOP_LEFT">
+                                    <font>
+                                        <Font size="15.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
+                    </children>
+                </GridPane>
             </children>
         </AnchorPane>
     </children>

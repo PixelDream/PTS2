@@ -23,10 +23,7 @@ public class EtudiantController implements Initializable {
 
     @FXML
     private void openExercise() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/faireExercice.fxml"));
-        Etudiant.getStage().setScene(new Scene(root));
-        Etudiant.getStage().setMaximized(true);
-        Etudiant.getStage().show();
+        Etudiant.changeScene("/faireExercice.fxml");
     }
 
     @FXML

@@ -6,14 +6,11 @@ import java.nio.file.Files;
 public class MediaExercice implements Serializable {
 
     private final String CACHE_DIRECTORY = System.getProperty("java.io.tmpdir") + ".reconstitution";
-
+    private final byte[] image;
+    private final boolean isAudio;
     private final String ressourceName;
     private final byte[] ressource;
-
     private final String imageName;
-    private final byte[] image;
-
-    private final boolean isAudio;
 
     public MediaExercice(File ressource, File image, boolean isAudio) {
         this.isAudio = isAudio;
@@ -23,6 +20,8 @@ public class MediaExercice implements Serializable {
 
         String imageName = "";
         String ressourceName = "";
+
+        System.out.println("test: " + ressource.toPath());
 
         if (isAudio && image != null) {
             try {
@@ -79,5 +78,4 @@ public class MediaExercice implements Serializable {
 
         return file;
     }
-
 }

@@ -1,5 +1,8 @@
 package reconstitution.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Evaluation extends Exercice {
 
     private boolean limite;
@@ -44,8 +47,8 @@ public class Evaluation extends Exercice {
     }
 
     @Override
-    public boolean proposer(String proposition) {
-        boolean containCorrect = false;
+    public List<Integer> proposer(String proposition) {
+        List<Integer> containCorrect = new ArrayList<>();
 
         for (String prop : proposition.split("[ '-,.;:]")) {
             for (int i = 0; i < getMots().length; i++) {
@@ -62,7 +65,7 @@ public class Evaluation extends Exercice {
                 if (isCorrect) {
                     getMotsOccult()[i] = getMots()[i];
                     addNbNombreDecouv();
-                    containCorrect = true;
+                    containCorrect.add(i);
                 }
             }
         }

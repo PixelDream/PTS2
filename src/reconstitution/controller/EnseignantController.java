@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import reconstitution.Enseignant;
+import reconstitution.model.Exercice;
 
 import java.io.IOException;
 import java.net.URL;
@@ -23,10 +24,7 @@ public class EnseignantController implements Initializable {
 
     @FXML
     private void newExercise() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/creationExercice.fxml"));
-        Enseignant.getStage().setScene(new Scene(root));
-        Enseignant.getStage().setMaximized(true);
-        Enseignant.getStage().show();
+        Enseignant.changeScene("/creationExercice.fxml");
     }
 
     @FXML
@@ -50,9 +48,22 @@ public class EnseignantController implements Initializable {
 
     @FXML
     private void correctExercise() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/correctionExercice.fxml"));
-        Enseignant.getStage().setScene(new Scene(root));
+        Enseignant.changeScene("/correctionExercice.fxml");
+    }
+
+    @FXML
+    private void openExercise() throws IOException {
+        Exercice exercice = Exercice.Importer();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/creationExercice.fxml"));
+        Parent root = fxmlLoader.load();
+
+        CreationController controller = fxmlLoader.getController();
+        controller.setExercice(exercice);
+
+        Enseignant.getStage().getScene().setRoot(root);
         Enseignant.getStage().setMaximized(true);
         Enseignant.getStage().show();
+
     }
 }

@@ -1,10 +1,7 @@
 package reconstitution.controller;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
@@ -24,10 +21,7 @@ import reconstitution.utils.PopUpName;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Optional;
-import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -58,6 +52,7 @@ public class ExerciceController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         exercice = Exercice.Importer();
+        System.out.println(exercice);
 
         consigne.setText(exercice.getConsigne());
         aide.setText(exercice.getAide());
@@ -116,9 +111,18 @@ public class ExerciceController implements Initializable {
     private void proposition() {
         if (proposition.getText().equalsIgnoreCase("")) return;
 
-        if (exercice.proposer(proposition.getText())) {
+        List<Integer> res = exercice.proposer(proposition.getText());
+
+        if (!res.isEmpty()) {
             transcription.getChildren().clear();
             transcription.getChildren().addAll(exercice.getTextOccultAsList());
+
+            AtomicInteger acc = new AtomicInteger();
+            transcription.getChildren().forEach(txt -> {
+                if (res.contains(acc.getAndIncrement())) {
+                    txt.setStyle("-fx-fill: green;-fx-font-size: 15.0;");
+                }
+            });
 
             if (exercice instanceof Entrainement) {
                 Entrainement entrainement = (Entrainement) exercice;
@@ -140,13 +144,7 @@ public class ExerciceController implements Initializable {
     @FXML
     private void goback() throws IOException {
         PopUp popUp = new PopUp(Alert.AlertType.CONFIRMATION, "Confirmation", "Vous êtes sûr de quitter l'exercice ?");
-
-        if (popUp.isAccepted()) {
-            Parent root = FXMLLoader.load(getClass().getResource("/etudiantAccueil.fxml"));
-            Etudiant.getStage().setScene(new Scene(root));
-            Etudiant.getStage().setMaximized(true);
-            Etudiant.getStage().show();
-        }
+        if (popUp.isAccepted()) Etudiant.changeScene("/etudiantAccueil.fxml");
     }
 
     @FXML
@@ -203,7 +201,7 @@ public class ExerciceController implements Initializable {
 
     @FXML
     private void enregistrer() {
-        enregistrer.hide();
+        //enregistrer.hide();
 
         PopUpName popUpName = new PopUpName();
         Optional<Pair<String, String>> result = popUpName.getDataResult();

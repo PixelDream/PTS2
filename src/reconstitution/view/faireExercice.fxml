@@ -1,151 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.text.TextFlow?>
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reconstitution.controller.ExerciceController" stylesheets="@style.css">
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: white;"
+      xmlns="http://javafx.com/javafx/9.0.1" fx:controller="reconstitution.controller.ExerciceController">
     <children>
-        <MenuBar VBox.vgrow="NEVER">
+        <MenuBar>
             <menus>
                 <Menu mnemonicParsing="false" onShown="#goback" styleClass="hover" text="Retour">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="" />
+                        <MenuItem mnemonicParsing="false" text=""/>
                     </items>
                 </Menu>
-                <Menu fx:id="solution" mnemonicParsing="false" onShown="#solution" styleClass="hover" text="Solution" visible="false">
+                <Menu fx:id="solution" mnemonicParsing="false" onShown="#solution" styleClass="hover" text="Solution"
+                      visible="false">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="" />
+                        <MenuItem mnemonicParsing="false" text=""/>
                     </items>
                 </Menu>
-                <Menu fx:id="enregistrer" mnemonicParsing="false" onShown="#enregistrer" styleClass="hover" text="Enregistrer" visible="false">
+                <Menu fx:id="enregistrer" mnemonicParsing="false" onShown="#enregistrer" styleClass="hover"
+                      text="Enregistrer" visible="false">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="" />
+                        <MenuItem mnemonicParsing="false" text=""/>
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+        <StackPane prefHeight="1080.0" prefWidth="720.0" style="-fx-background-color: white;">
             <children>
-                <GridPane layoutX="48.0" layoutY="81.0" prefHeight="926.0" prefWidth="1820.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="81.0">
+                <GridPane hgap="50.0" maxHeight="Infinity" maxWidth="Infinity" prefHeight="110.85714285714286"
+                          prefWidth="1080.0" vgap="15.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="903.90478515625" minWidth="10.0" prefWidth="780.9524187360491" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1037.9999389648438" minWidth="10.0" prefWidth="83.61900983537942" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1037.9999389648438" minWidth="10.0" prefWidth="960.7143293108259" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints maxHeight="332.00003923688615" minHeight="10.0" prefHeight="241.99998256138392" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="719.4285518101284" minHeight="10.0" prefHeight="491.4285627092634" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="411.61908830915183" minHeight="10.0" prefHeight="220.2857230050223" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="127.85715593610489" minHeight="10.0" percentHeight="8.0"
+                                        prefHeight="40.999996185302734" vgrow="NEVER"/>
+                        <RowConstraints maxHeight="127.85715593610489" minHeight="0.0" percentHeight="5.0"
+                                        prefHeight="3.814697265625E-6" vgrow="NEVER"/>
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="25.0"
+                                        prefHeight="141.42857142857142" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="10.0" percentHeight="60.0" vgrow="ALWAYS"/>
+                        <RowConstraints maxHeight="219.9999171665737" minHeight="10.0" percentHeight="10.0"
+                                        prefHeight="109.71426391601562" vgrow="NEVER"/>
+                        <RowConstraints maxHeight="255.0" minHeight="0.0" percentHeight="15.0"
+                                        prefHeight="49.285736083984375" vgrow="NEVER"/>
+                        <RowConstraints maxHeight="255.0" minHeight="0.0" percentHeight="5.0" prefHeight="255.0"
+                                        vgrow="NEVER"/>
+                        <RowConstraints maxHeight="255.0" minHeight="10.0" percentHeight="5.0" prefHeight="255.0"
+                                        vgrow="NEVER"/>
                     </rowConstraints>
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                    </padding>
                     <children>
-                        <AnchorPane prefHeight="206.0" prefWidth="739.0">
+                        <StackPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="150.0" prefWidth="200.0"
+                                   GridPane.rowIndex="1">
                             <children>
-                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Consigne" wrappingWidth="778.7142848968506" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Consigne"
+                                      wrappingWidth="477.71428871924036" StackPane.alignment="CENTER_LEFT">
                                     <font>
-                                        <Font name="System Bold" size="20.0" />
+                                        <Font name="System Bold" size="20.0"/>
                                     </font>
                                 </Text>
-                                <ScrollPane fitToWidth="true" layoutY="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                            <children>
+                                <ScrollPane fitToWidth="true">
                                     <content>
                                         <TextFlow>
                                             <children>
-                                                <Text fx:id="consigne" strokeType="OUTSIDE" strokeWidth="0.0" text="Test">
+                                                <Text fx:id="consigne" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      text="Test">
                                                     <font>
-                                                        <Font size="15.0" />
+                                                        <Font size="15.0"/>
                                                     </font>
                                                 </Text>
                                             </children>
                                             <padding>
-                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                             </padding>
                                         </TextFlow>
                                     </content>
                                 </ScrollPane>
                             </children>
-                        </AnchorPane>
-
-                        <fx:include fx:id="media" source="mediaSnippet.fxml" />
-
-                        <AnchorPane prefHeight="200.0" prefWidth="779.0" GridPane.rowIndex="2">
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                                   GridPane.rowSpan="5">
                             <children>
-                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Aide" wrappingWidth="778.7142848968506" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <ScrollPane fitToWidth="true">
+                                    <content>
+                                        <TextFlow fx:id="transcription" lineSpacing="2.0">
+                                            <padding>
+                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+                                            </padding>
+                                        </TextFlow>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                            <GridPane.margin>
+                                <Insets bottom="40.0"/>
+                            </GridPane.margin>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <children>
+                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Transcription"
+                                      wrappingWidth="527.2856349945068" StackPane.alignment="CENTER_LEFT">
                                     <font>
-                                        <Font name="System Bold" size="20.0" />
+                                        <Font name="System Bold" size="20.0"/>
                                     </font>
                                 </Text>
-                                <ScrollPane fitToWidth="true" layoutY="40.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                            </children>
+                        </StackPane>
+                        <StackPane GridPane.rowIndex="5" GridPane.rowSpan="3">
+                            <children>
+                                <ScrollPane fitToWidth="true">
                                     <content>
                                         <TextFlow>
                                             <children>
                                                 <Text fx:id="aide" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                                                     <font>
-                                                        <Font size="15.0" />
+                                                        <Font size="15.0"/>
                                                     </font>
                                                 </Text>
                                             </children>
                                             <padding>
-                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                             </padding>
                                         </TextFlow>
                                     </content>
                                 </ScrollPane>
                             </children>
-                        </AnchorPane>
-                        <AnchorPane prefHeight="955.0" prefWidth="959.0" GridPane.columnIndex="2" GridPane.rowSpan="3">
+                        </StackPane>
+                        <StackPane GridPane.rowIndex="4">
                             <children>
-                                <Text fill="#e5007d" layoutX="157.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transcription" wrappingWidth="778.7142848968506" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                <Text fill="#e5007d" strokeType="OUTSIDE" strokeWidth="0.0" text="Aide"
+                                      wrappingWidth="78.14287376403809" StackPane.alignment="CENTER_LEFT">
                                     <font>
-                                        <Font name="System Bold" size="20.0" />
-                                    </font>
-                                </Text>
-                                <ScrollPane fitToWidth="true" layoutY="40.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
-                                    <content>
-                                        <TextFlow fx:id="transcription" lineSpacing="2.0">
-                                            <padding>
-                                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
-                                            </padding>
-                                        </TextFlow>
-                                    </content>
-                                </ScrollPane>
-                                <Text fx:id="count" layoutX="901.0" layoutY="946.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 mots" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="0.0">
-                                    <font>
-                                        <Font size="14.0" />
+                                        <Font name="System Bold" size="20.0"/>
                                     </font>
                                 </Text>
                             </children>
-                        </AnchorPane>
+                        </StackPane>
+                        <StackPane GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.rowSpan="2"
+                                   GridPane.valignment="CENTER" GridPane.vgrow="always">
+                            <children>
+                                <fx:include fx:id="media" source="mediaSnippet.fxml"/>
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                            <children>
+                                <AnchorPane>
+                                    <children>
+                                        <TextField fx:id="proposition" onKeyPressed="#clavierAction" prefHeight="31.0"
+                                                   prefWidth="361.0" AnchorPane.bottomAnchor="10.0"
+                                                   AnchorPane.rightAnchor="85.0"/>
+                                        <Button fx:id="btnProposition" layoutX="215.42857360839844"
+                                                mnemonicParsing="false" onAction="#proposition" prefHeight="31.0"
+                                                prefWidth="65.0" style="-fx-background-color: #e5007d;"
+                                                styleClass="hover" text="Envoyer" textFill="WHITE"
+                                                AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="System Bold" size="12.0"/>
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                            <children>
+                                <Text fx:id="titreMode" strokeType="OUTSIDE" strokeWidth="0.0" text="Mode Exercice"
+                                      StackPane.alignment="TOP_LEFT">
+                                    <font>
+                                        <Font size="27.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+                            <children>
+                                <Text fx:id="timer" strokeType="OUTSIDE" strokeWidth="0.0" text="Temps restant : 10:00"
+                                      StackPane.alignment="TOP_RIGHT">
+                                    <font>
+                                        <Font size="27.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                            <children>
+                                <Text fx:id="count" strokeType="OUTSIDE" strokeWidth="0.0" text="0 mots" visible="false"
+                                      StackPane.alignment="TOP_RIGHT">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </StackPane>
                     </children>
                 </GridPane>
-                <Text fx:id="timer" layoutX="1797.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temps restant : 10:00" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="25.0">
-                    <font>
-                        <Font size="27.0" />
-                    </font>
-                </Text>
-                <TextField fx:id="proposition" layoutX="1427.0" layoutY="992.142857142857" onKeyPressed="#clavierAction" prefHeight="31.0" prefWidth="361.0" AnchorPane.bottomAnchor="31.85714285714289" AnchorPane.rightAnchor="131.8571428571429" />
-                <Button fx:id="btnProposition" layoutX="1803.0" layoutY="992.142857142857" mnemonicParsing="false" onAction="#proposition" prefHeight="31.0" prefWidth="65.0" style="-fx-background-color: #e5007d;" styleClass="hover" text="Envoyer" textFill="WHITE" AnchorPane.bottomAnchor="31.85714285714289" AnchorPane.rightAnchor="51.85714285714289">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Button>
-                <Text fx:id="titreMode" layoutX="52.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mode Exercice" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="25.0">
-                    <font>
-                        <Font size="27.0" />
-                    </font>
-                </Text>
             </children>
-        </AnchorPane>
+        </StackPane>
     </children>
 </VBox>
