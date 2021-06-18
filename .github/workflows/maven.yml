@@ -50,7 +50,7 @@ jobs:
         with:
           # Artifact name
           name: Reconstitution Etudiant Windows
-          path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.exe'
+          path: 'D:\a\PTS2\PTS2\target\Etudiant\Reconstitution Etudiant_1.exe'
 
   build_etu_mac:
     name: Build Etudiant Mac
@@ -70,7 +70,7 @@ jobs:
           java-package: jdk+fx # (jre, jdk, or jdk+fx) - defaults to jdk
           architecture: x64 # (x64 or x86) - defaults to x64
       - name: Build with Maven
-        run: mvn -B -P Etudiant_mac package --file pom.xml
+        run: mvn -e -B -P Etudiant_mac package --file pom.xml
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
@@ -97,7 +97,7 @@ jobs:
         with:
           # Artifact name
           name: Reconstitution Enseignant Linux
-          path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.deb'
+          path: '/home/runner/work/PTS2/PTS2/target/Enseignant/Reconstitution Enseignant_1.deb'
 
   build_ens_windows:
     name: Build Enseignant Windows
@@ -118,7 +118,7 @@ jobs:
         with:
           # Artifact name
           name: Reconstitution Enseignant Windows
-          path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.exe'
+          path: 'D:\a\PTS2\PTS2\target\Enseignant\Reconstitution Enseignant_1.exe'
 
   build_ens_mac:
     name: Build Enseignant Mac
@@ -138,10 +138,10 @@ jobs:
           java-package: jdk+fx # (jre, jdk, or jdk+fx) - defaults to jdk
           architecture: x64 # (x64 or x86) - defaults to x64
       - name: Build with Maven
-        run: mvn -B -P Enseignant_mac package --file pom.xml
+        run: mvn -e -B -P Enseignant_mac package --file pom.xml
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
           # Artifact name
           name: Reconstitution Enseignant Mac
-          path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.dmg'
+          path: '/home/runner/work/PTS2/PTS2/target/Enseignant/Reconstitution Enseignant_1.dmg'

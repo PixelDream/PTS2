@@ -221,7 +221,6 @@
                                         <generateDmg>true</generateDmg>
                                         <generatePkg>true</generatePkg>
                                         <relocateJar>true</relocateJar>
-                                        <codesignApp>false</codesignApp>
                                     </macConfig>
                                 </configuration>
                             </execution>
@@ -432,7 +431,6 @@
                                         <generateDmg>true</generateDmg>
                                         <generatePkg>true</generatePkg>
                                         <relocateJar>true</relocateJar>
-                                        <codesignApp>false</codesignApp>
                                     </macConfig>
                                 </configuration>
                             </execution>
