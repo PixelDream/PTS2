@@ -211,7 +211,7 @@
                                     <mainClass>reconstitution.Etudiant</mainClass>
                                     <!-- optional -->
                                     <bundleJre>true</bundleJre>
-                                    <jrePath>${java.home}</jrePath>
+                                    <jrePath>/usr/bin/java</jrePath>
                                     <generateInstaller>true</generateInstaller>
                                     <administratorRequired>false</administratorRequired>
                                     <runnableJar>${project.basedir}\target\Etudiant\Etudiant_mac.jar</runnableJar>
@@ -421,7 +421,7 @@
                                     <mainClass>reconstitution.Enseignant</mainClass>
                                     <!-- optional -->
                                     <bundleJre>true</bundleJre>
-                                    <jrePath>${java.home}</jrePath>
+                                    <jrePath>/usr/bin/java</jrePath>
                                     <generateInstaller>true</generateInstaller>
                                     <administratorRequired>false</administratorRequired>
                                     <runnableJar>${project.basedir}\target\Enseignant\Enseignant_mac.jar</runnableJar>

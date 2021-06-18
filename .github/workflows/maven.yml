@@ -28,6 +28,7 @@ jobs:
       uses: actions/upload-artifact@v2.2.4
       with:
         # Artifact name
+        name: Reconstitution Etudiant Linux
         path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.deb'
 
   build_etu_windows:
@@ -48,6 +49,7 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           # Artifact name
+          name: Reconstitution Etudiant Windows
           path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.exe'
 
   build_etu_mac:
@@ -68,6 +70,7 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           # Artifact name
+          name: Reconstitution Etudiant Mac
           path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.dmg'
 
   build_ens_linux:
@@ -88,6 +91,7 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           # Artifact name
+          name: Reconstitution Enseignant Linux
           path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.deb'
 
   build_ens_windows:
@@ -108,6 +112,7 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           # Artifact name
+          name: Reconstitution Enseignant Windows
           path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.exe'
 
   build_ens_mac:
@@ -128,4 +133,5 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           # Artifact name
+          name: Reconstitution Enseignant Mac
           path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Reconstitution Etudiant_1.dmg'
