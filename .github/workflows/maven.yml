@@ -27,5 +27,5 @@ jobs:
       uses: actions/upload-artifact@v2.2.4
       with:
         # Artifact name
-        path: '/target/Etudiant/Etudian.jar'
+        path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Etudian.jar'
 

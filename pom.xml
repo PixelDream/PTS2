@@ -23,6 +23,14 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>12.0.2</version>
+        </dependency>
+    </dependencies>
+
     <profiles>
         <profile>
             <id>Etudiant</id>
@@ -35,6 +43,14 @@
                 <directory>${project.basedir}/target/Etudiant</directory>
                 <finalName>Etudiant</finalName>
                 <plugins>
+                    <plugin>
+                        <groupId>org.openjfx</groupId>
+                        <artifactId>javafx-maven-plugin</artifactId>
+                        <version>0.0.6</version>
+                        <configuration>
+                            <mainClass>reconstitution.Etudiant</mainClass>
+                        </configuration>
+                    </plugin>
                     <!-- Make this jar executable -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
