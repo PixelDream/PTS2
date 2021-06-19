@@ -22,23 +22,16 @@ jobs:
         id: download
         with:
           path: ~/artefacts
-      - name: Create GitHub release
-        id: create-new-release
-        uses: actions/create-release@v1
+      - name: Release
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ github.token }}
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
-      - name: upload linux artifact
-        uses: actions/upload-release-asset@v1
+          files: ~/artefacts/*
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        with:
-          upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-          asset_path: ${{steps.download.outputs.download-path}}
-          asset_name: reconstitution.tar.gz
-          asset_content_type: application/gzip
   build_etu_linux:
     name: Build Etudiant Linux
     runs-on: ubuntu-latest
