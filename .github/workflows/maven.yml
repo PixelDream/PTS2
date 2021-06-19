@@ -10,6 +10,37 @@ on:
     branches: [ master ]
 
 jobs:
+  release-project:
+    name: Release Project
+    runs-on: ubuntu-latest
+    needs: [build_etu_linux, build_etu_windows, build_etu_mac, build_ens_linux, build_ens_windows, build_ens_mac]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: download artefacts
+        uses: actions/download-artifact@v2
+        with:
+          path: ~/artefacts
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: ~/artefacts
+     - name: Create GitHub release
+       id: create-new-release
+       uses: actions/create-release@v1
+       env:
+         GITHUB_TOKEN: ${{ github.token }}
+       with:
+         tag_name: ${{ github.run_number }}
+         release_name: Release ${{ github.run_number }}
+      - name: upload linux artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create-new-release.outputs.upload_url }}
+          asset_path: ~/artefacts
+          asset_name: reconstitution.tar.gz
+          asset_content_type: application/gzip
   build_etu_linux:
     name: Build Etudiant Linux
     runs-on: ubuntu-latest
