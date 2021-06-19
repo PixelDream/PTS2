@@ -55,7 +55,7 @@ public abstract class Exercice implements Serializable {
             } catch (final java.io.IOException e) {
                 new PopUp(Alert.AlertType.ERROR, "Fichier inconnu", "Ce fichier ne peut être pris en charge par l'application.", selectedFile.getAbsolutePath());
             } catch (final ClassNotFoundException e) {
-                new PopUp(Alert.AlertType.ERROR, "Fichier inconnu", "Ce fichier est corrompu, il a été modifié ou il s'agit d'un encien exercice plus compatible.", selectedFile.getAbsolutePath());
+                new PopUp(Alert.AlertType.ERROR, "Fichier inconnu", "Ce fichier est corrompu, il a été modifié ou il s'agit d'un ancien exercice plus compatible.", selectedFile.getAbsolutePath());
             } finally {
                 try {
                     if (ois != null) ois.close();
@@ -105,7 +105,7 @@ public abstract class Exercice implements Serializable {
                 } catch (final java.io.IOException e) {
                     new PopUp(Alert.AlertType.ERROR, "Fichier inconnu", "Ce fichier ne peut être pris en charge par l'application.", file.getAbsolutePath());
                 } catch (final ClassNotFoundException e) {
-                    new PopUp(Alert.AlertType.ERROR, "Fichier inconnu", "Ce fichier est corrompu, il a été modifié ou il s'agit d'un encien exercice plus compatible.", file.getAbsolutePath());
+                    new PopUp(Alert.AlertType.ERROR, "Fichier inconnu", "Ce fichier est corrompu, il a été modifié ou il s'agit d'un ancien exercice plus compatible.", file.getAbsolutePath());
                 } finally {
                     try {
                         if (ois != null) ois.close();
