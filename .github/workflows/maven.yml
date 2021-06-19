@@ -78,7 +78,7 @@ jobs:
         with:
           # Artifact name
           name: Reconstitution Etudiant Mac
-          path: '/home/runner/work/PTS2/PTS2/target/Etudiant/Etudiant_win.dmg'
+          path: '/Users/runner/work/PTS2/PTS2/target/Etudiant/Etudiant_mac.jar'
 
   build_ens_linux:
     name: Build Enseignant Linux
@@ -148,4 +148,4 @@ jobs:
         with:
           # Artifact name
           name: Reconstitution Enseignant Mac
-          path: '/home/runner/work/PTS2/PTS2/target/Enseignant/Enseignant_mac.jar'
+          path: '/Users/runner/work/PTS2/PTS2/target/Enseignant/Enseignant_mac.jar'
