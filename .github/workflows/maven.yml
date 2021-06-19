@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: innoSetup
-        run: Choco-Install -PackageName innosetup
+        run: Choco-Install -PackageName innosetup --force
       - name: Set up JDK 18
         uses: actions/setup-java@v1
         with:
@@ -108,7 +108,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: innoSetup
-        run: Choco-Install -PackageName innosetup
+        run: Choco-Install -PackageName innosetup --force
       - name: Set up JDK 18
         uses: actions/setup-java@v1
         with:

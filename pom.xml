@@ -433,6 +433,7 @@
                                         <generateDmg>true</generateDmg>
                                         <generatePkg>true</generatePkg>
                                         <relocateJar>true</relocateJar>
+                                        <developerId>yannaro35@gmail.com</developerId>
                                     </macConfig>
                                 </configuration>
                             </execution>
