@@ -17,10 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: download artefacts
-        uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v2
         with:
-          path: /home/artefacts
+          path: home/artefacts
      - name: Create GitHub release
        id: create-new-release
        uses: actions/create-release@v1
@@ -35,7 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-          asset_path: /home/artefacts
+          asset_path: home/artefacts
           asset_name: reconstitution.tar.gz
           asset_content_type: application/gzip
   build_etu_linux:
