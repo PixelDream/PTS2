@@ -36,15 +36,21 @@
             <build>
                 <directory>${project.basedir}/target/Etudiant</directory>
                 <finalName>Etudiant_win</finalName>
+                <resources>
+                    <resource>
+                        <directory>src/reconstitution/resources</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/reconstitution/view</directory>
+                    </resource>
+                </resources>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <version>2.4</version>
                         <configuration>
-                            <skipIfEmpty>true</skipIfEmpty>
                             <archive>
-                                <index>true</index>
                                 <manifest>
                                     <mainClass>reconstitution.Etudiant</mainClass>
                                 </manifest>
@@ -121,15 +127,21 @@
             <build>
                 <directory>${project.basedir}/target/Etudiant</directory>
                 <finalName>Etudiant_lin</finalName>
+                <resources>
+                    <resource>
+                        <directory>src/reconstitution/resources</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/reconstitution/view</directory>
+                    </resource>
+                </resources>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <version>2.4</version>
                         <configuration>
-                            <skipIfEmpty>true</skipIfEmpty>
                             <archive>
-                                <index>true</index>
                                 <manifest>
                                     <mainClass>reconstitution.Etudiant</mainClass>
                                 </manifest>
@@ -181,15 +193,21 @@
             <build>
                 <directory>${project.basedir}/target/Etudiant</directory>
                 <finalName>Etudiant_mac</finalName>
+                <resources>
+                    <resource>
+                        <directory>src/reconstitution/resources</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/reconstitution/view</directory>
+                    </resource>
+                </resources>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <version>2.4</version>
                         <configuration>
-                            <skipIfEmpty>true</skipIfEmpty>
                             <archive>
-                                <index>true</index>
                                 <manifest>
                                     <mainClass>reconstitution.Etudiant</mainClass>
                                 </manifest>
@@ -246,15 +264,21 @@
             <build>
                 <directory>${project.basedir}/target/Enseignant</directory>
                 <finalName>Enseignant_win</finalName>
+                <resources>
+                    <resource>
+                        <directory>src/reconstitution/resources</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/reconstitution/view</directory>
+                    </resource>
+                </resources>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <version>2.4</version>
                         <configuration>
-                            <skipIfEmpty>true</skipIfEmpty>
                             <archive>
-                                <index>true</index>
                                 <manifest>
                                     <mainClass>reconstitution.Enseignant</mainClass>
                                 </manifest>
@@ -331,15 +355,21 @@
             <build>
                 <directory>${project.basedir}/target/Enseignant</directory>
                 <finalName>Enseignant_lin</finalName>
+                <resources>
+                    <resource>
+                        <directory>src/reconstitution/resources</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/reconstitution/view</directory>
+                    </resource>
+                </resources>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <version>2.4</version>
                         <configuration>
-                            <skipIfEmpty>true</skipIfEmpty>
                             <archive>
-                                <index>true</index>
                                 <manifest>
                                     <mainClass>reconstitution.Enseignant</mainClass>
                                 </manifest>
@@ -391,15 +421,21 @@
             <build>
                 <directory>${project.basedir}/target/Enseignant</directory>
                 <finalName>Enseignant_mac</finalName>
+                <resources>
+                    <resource>
+                        <directory>src/reconstitution/resources</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/reconstitution/view</directory>
+                    </resource>
+                </resources>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <version>2.4</version>
                         <configuration>
-                            <skipIfEmpty>true</skipIfEmpty>
                             <archive>
-                                <index>true</index>
                                 <manifest>
                                     <mainClass>reconstitution.Enseignant</mainClass>
                                 </manifest>
