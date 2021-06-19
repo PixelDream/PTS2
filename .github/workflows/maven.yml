@@ -70,8 +70,8 @@ jobs:
           path: ~/artefacts
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
+          tag_name: 1.0.0
           files: ~/artefacts/*
         env:
           GITHUB_TOKEN: ${{ github.token }}
