@@ -385,8 +385,8 @@
             <id>Enseignant_mac</id>
             <properties>
                 <exec.mainClass>reconstitution.Enseignant</exec.mainClass>
-                <displayName>Reconstitution Enseignant</displayName>
-                <name>Reconstitution Enseignant</name>
+                <displayName>ReconstitutionEnseignant</displayName>
+                <name>ReconstitutionEnseignant</name>
             </properties>
             <build>
                 <directory>${project.basedir}/target/Enseignant</directory>
