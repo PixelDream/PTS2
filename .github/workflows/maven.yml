@@ -7,7 +7,7 @@ on:
   push:
     branches: [ master ]
     tags:
-      - '*.*.*'
+      - 'release'
   pull_request:
     branches: [ master ]
 
