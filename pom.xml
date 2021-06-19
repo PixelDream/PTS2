@@ -214,38 +214,38 @@
                             </archive>
                         </configuration>
                     </plugin>
-                    <plugin>
-                        <groupId>io.github.fvarrui</groupId>
-                        <artifactId>javapackager</artifactId>
-                        <version>1.5.1</version>
-                        <executions>
-                            <execution>
-                                <id>bundling-for-mac</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>package</goal>
-                                </goals>
-                                <configuration>
-                                    <platform>mac</platform>
-                                    <createTarball>true</createTarball>
-                                    <mainClass>reconstitution.Etudiant</mainClass>
-                                    <!-- optional -->
-                                    <bundleJre>true</bundleJre>
-                                    <jrePath>/Users/runner/hostedtoolcache/jdk+fx/8.0.292/x64</jrePath>
-                                    <generateInstaller>true</generateInstaller>
-                                    <administratorRequired>false</administratorRequired>
-                                    <runnableJar>${project.basedir}\target\Etudiant\Etudiant_mac.jar</runnableJar>
-                                    <copyDependencies>false</copyDependencies>
-                                    <macConfig>
-                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>
-                                        <generateDmg>true</generateDmg>
-                                        <generatePkg>true</generatePkg>
-                                        <relocateJar>true</relocateJar>
-                                    </macConfig>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>io.github.fvarrui</groupId>-->
+<!--                        <artifactId>javapackager</artifactId>-->
+<!--                        <version>1.5.1</version>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>bundling-for-mac</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>package</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <platform>mac</platform>-->
+<!--                                    <createTarball>true</createTarball>-->
+<!--                                    <mainClass>reconstitution.Etudiant</mainClass>-->
+<!--                                    &lt;!&ndash; optional &ndash;&gt;-->
+<!--                                    <bundleJre>true</bundleJre>-->
+<!--                                    <jrePath>/Users/runner/hostedtoolcache/jdk+fx/8.0.292/x64</jrePath>-->
+<!--                                    <generateInstaller>true</generateInstaller>-->
+<!--                                    <administratorRequired>false</administratorRequired>-->
+<!--                                    <runnableJar>${project.basedir}\target\Etudiant\Etudiant_mac.jar</runnableJar>-->
+<!--                                    <copyDependencies>false</copyDependencies>-->
+<!--                                    <macConfig>-->
+<!--                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>-->
+<!--                                        <generateDmg>true</generateDmg>-->
+<!--                                        <generatePkg>true</generatePkg>-->
+<!--                                        <relocateJar>true</relocateJar>-->
+<!--                                    </macConfig>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
                 </plugins>
             </build>
         </profile>
@@ -442,39 +442,39 @@
                             </archive>
                         </configuration>
                     </plugin>
-                    <plugin>
-                        <groupId>io.github.fvarrui</groupId>
-                        <artifactId>javapackager</artifactId>
-                        <version>1.5.1</version>
-                        <executions>
-                            <execution>
-                                <id>bundling-for-mac</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>package</goal>
-                                </goals>
-                                <configuration>
-                                    <platform>mac</platform>
-                                    <createTarball>true</createTarball>
-                                    <mainClass>reconstitution.Enseignant</mainClass>
-                                    <!-- optional -->
-                                    <bundleJre>true</bundleJre>
-                                    <jrePath>/Users/runner/hostedtoolcache/jdk+fx/8.0.292/x64</jrePath>
-                                    <generateInstaller>true</generateInstaller>
-                                    <administratorRequired>false</administratorRequired>
-                                    <runnableJar>${project.basedir}\target\Enseignant\Enseignant_mac.jar</runnableJar>
-                                    <copyDependencies>false</copyDependencies>
-                                    <macConfig>
-                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>
-                                        <generateDmg>true</generateDmg>
-                                        <generatePkg>true</generatePkg>
-                                        <relocateJar>true</relocateJar>
-                                        <developerId>yannaro35@gmail.com</developerId>
-                                    </macConfig>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>io.github.fvarrui</groupId>-->
+<!--                        <artifactId>javapackager</artifactId>-->
+<!--                        <version>1.5.1</version>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>bundling-for-mac</id>-->
+<!--                                <phase>package</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>package</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <platform>mac</platform>-->
+<!--                                    <createTarball>true</createTarball>-->
+<!--                                    <mainClass>reconstitution.Enseignant</mainClass>-->
+<!--                                    &lt;!&ndash; optional &ndash;&gt;-->
+<!--                                    <bundleJre>true</bundleJre>-->
+<!--                                    <jrePath>/Users/runner/hostedtoolcache/jdk+fx/8.0.292/x64</jrePath>-->
+<!--                                    <generateInstaller>true</generateInstaller>-->
+<!--                                    <administratorRequired>false</administratorRequired>-->
+<!--                                    <runnableJar>${project.basedir}\target\Enseignant\Enseignant_mac.jar</runnableJar>-->
+<!--                                    <copyDependencies>false</copyDependencies>-->
+<!--                                    <macConfig>-->
+<!--                                        <icnsFile>${project.basedir}/icons/mac/64x64.icns</icnsFile>-->
+<!--                                        <generateDmg>true</generateDmg>-->
+<!--                                        <generatePkg>true</generatePkg>-->
+<!--                                        <relocateJar>true</relocateJar>-->
+<!--                                        <developerId>yannaro35@gmail.com</developerId>-->
+<!--                                    </macConfig>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
                 </plugins>
             </build>
         </profile>
