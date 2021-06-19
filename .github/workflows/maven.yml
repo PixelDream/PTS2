@@ -54,7 +54,7 @@ jobs:
 
   build_etu_mac:
     name: Build Etudiant Mac
-    runs-on: macos-11.0
+    runs-on: macos-10.15
 
     steps:
       - uses: actions/checkout@v1
@@ -122,7 +122,7 @@ jobs:
 
   build_ens_mac:
     name: Build Enseignant Mac
-    runs-on: macos-11.0
+    runs-on: macos-10.15
 
     steps:
       - uses: actions/checkout@v1
