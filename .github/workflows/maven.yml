@@ -21,7 +21,6 @@ jobs:
       - uses: actions/download-artifact@master
         id: download
         with:
-          name: 'reconstitution'
           path: ~/artefacts
       - name: Create GitHub release
         id: create-new-release
