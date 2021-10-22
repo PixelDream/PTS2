@@ -28,4 +28,4 @@ Enseignants à l’initiative du projet :
 * <bruno.buchet@univ-lemans.fr>
 
 
-![logo](https://upload.wikimedia.org/wikipedia/commons/f/f8/LOGO-ORIGINAL_WEB.jpg "Logo IUT Laval")
+![logo](https://upload.wikimedia.org/wikipedia/commons/f/f8/LOGO-ORIGINAL_WEB.jpg "IUT Laval Logo")
